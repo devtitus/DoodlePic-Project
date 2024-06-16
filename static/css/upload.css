@@ -1,0 +1,144 @@
+:root {
+  --primary-font: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #dde3ee;
+}
+
+.bg-container {
+  display: flex;
+  height: 100dvh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  background-color: white;
+  padding: 40px;
+  gap: 33px;
+  border-radius: 8px;
+}
+
+.heading-container {
+  padding: 20px 0;
+}
+
+.heading-container span {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 80px;
+  gap: 17px;
+  border: 0.5px dashed #1a1a1a;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.upload-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.text-tooltip {
+  color: #484848;
+  font-family: var(--primary-font);
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.message-1 {
+  display: flex;
+  flex-direction: row;
+  font-family: var(--primary-font);
+  font-size: .95em;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  padding: 14px 0;
+  justify-content: end;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.primary-btn {
+  padding: 14px 24px;
+  background-color: #1677ff;
+  color: white;
+  border-radius: 8px;
+  font-family: var(--primary-font);
+  font-weight: 500;
+  border: 1px solid #1677ff;
+  transition: transform 0.1s ease;
+}
+
+.primary-btn:active {
+  transform: scale(0.95);
+}
+
+.primary-btn:hover {
+  background-color: #1677ff6e;
+  color: #1a1a1a;
+  font-family: var(--primary-font);
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid #1677ff;
+}
+
+.upload-container.dragover {
+  border: 2px dashed #000;
+  background-color: #f0f0f0;
+}
+
+.file-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.file-info span {
+  font-size: 16px;
+}
+
+.remove-file {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page-heading {
+  font-family: var(--primary-font);
+}
