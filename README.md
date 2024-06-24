@@ -1,7 +1,5 @@
 Image-to-Sketch
 
-Here is an awesome video:
-
 Check out the Demo video : https://youtu.be/Ri5vf8UpwGQ
 
 
