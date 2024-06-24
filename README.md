@@ -1,5 +1,7 @@
 Image-to-Sketch
 
+[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)]([https://youtu.be/T-D1KVIuvjA](https://youtu.be/Ri5vf8UpwGQ))
+
 The "Image-to-Sketch" project is a Python application designed to transform digital images into artistic sketches using computer vision techniques. It leverages the power of OpenCV, NumPy, and Flask to provide a seamless and intuitive user experience.
 Features:
 
