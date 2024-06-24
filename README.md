@@ -2,7 +2,7 @@ Image-to-Sketch
 
 Here is an awesome video:
 
-<video width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></video>
+Check out the Demo video : https://youtu.be/Ri5vf8UpwGQ
 
 
 
