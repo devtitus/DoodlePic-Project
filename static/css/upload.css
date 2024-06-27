@@ -100,7 +100,7 @@ body {
   background: #c8f560;
 }
 
-.card {
+/* .card {
   display: flex;
   flex-direction: column;
   width: fit-content;
@@ -109,7 +109,7 @@ body {
   padding: 40px;
   gap: 33px;
   border-radius: 8px;
-}
+} */
 
 .heading-container {
   padding: 20px 0;
