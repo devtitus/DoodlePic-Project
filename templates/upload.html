@@ -1,157 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <title>Upload Image</title>
-  <link
+  <head>
+    <meta charset="utf-8" />
+    <title>Upload Image</title>
+    <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/upload.css') }}"
     />
-  <!-- <link rel="stylesheet" href="../static/css/upload.css" /> -->
-</head>
+    <!-- <link rel="stylesheet" href="../static/css/upload.css" /> -->
+  </head>
 
-<body>
-  <div class="bg-container">
-    <div class="right-container">
-      <div class="content-container">
-        <div class="bread-head-para-container">
-          <div class="breadcrumb">
-            <div class="icon-box">
-              <img src="../static/assets/Img_out-box_light.svg" alt="Intro-Icon" />
+  <body>
+    <div class="bg-container">
+      <div class="right-container">
+        <div class="content-container">
+          <div class="bread-head-para-container">
+            <div class="breadcrumb">
+              <div class="icon-box">
+                <img
+                  src="../static/assets/Img_out-box_light.svg"
+                  alt="Intro-Icon"
+                />
+              </div>
+              <text class="intro-text">Introducing Sketchi-fy</text>
             </div>
-            <text class="intro-text">Introducing Sketchi-fy</text>
+            <div class="heading-para-container">
+              <h1 class="page-heading">Image to Sketch</h1>
+              <p class="description-para">
+                Lorem ipsum dolor sit amet consectetur. Cursus praesent massa
+                vulputate tincidunt tellus laoreet ultrices velit cras.
+              </p>
+            </div>
           </div>
-          <div class="heading-para-container">
-            <h1 class="page-heading">Image to Sketch</h1>
-            <p class="description-para">Lorem ipsum dolor sit amet consectetur. Cursus praesent massa </br>vulputate
-              tincidunt tellus laoreet ultrices velit cras. </p>
+          <div class="social-btn-container">
+            <a href="#">
+              <div class="github-icon-box">
+                <img
+                  src="../static/assets/github-mark-white 1.svg"
+                  alt="Github Icon"
+                />
+              </div>
+            </a>
+            <a href="#">
+              <div class="linkedin-icon-box">
+                <img
+                  src="../static/assets/iconmonstr-linkedin-3 1.svg"
+                  alt="LinkedIn Icon"
+                />
+              </div>
+            </a>
           </div>
-        </div>
-        <div class="social-btn-container">
-          <a href="#">
-            <div class="github-icon-box">
-              <img src="../static/assets/icons8-github 1.svg" alt="Github Icon">
-            </div>
-          </a>
-          <a href="#">
-            <div class="linkedin-icon-box">
-              <img src="../static/assets/icons8-linkedin 1.svg" alt="LinkedIn Icon">
-            </div>
-          </a>
         </div>
       </div>
-    </div>
 
-    <div class="left-container">
-      <div class="card">
-        <div class="inner-small-container">
-          <div class="heading-container">
-            <span>Choose Your Image</span>
-          </div>
-          <div class="content">
-            <form class="upload-form" id="upload-form" method="post" action="/upload" enctype="multipart/form-data">
-              <input type="file" id="file-input" name="file" required style="display: none" />
+      <div class="left-container">
+        <div class="card">
+          <form
+            class="upload-form"
+            id="upload-form"
+            method="post"
+            action="/upload"
+            enctype="multipart/form-data"
+          >
+            <div class="heading-container">
+              <span>Choose Your Image</span>
+              <input
+                type="file"
+                id="file-input"
+                name="file"
+                required
+                style="display: none"
+              />
               <div class="upload-container" id="upload-container">
                 <div class="inner-upload-container">
                   <div class="upload-icon-box">
-                    <img class="upload-icon" src="{{ url_for('static', filename='assets/upload-icon.svg') }}"
-                      alt="Upload Icon" />
+                    <img
+                      class="upload-icon"
+                      src="{{ url_for('static', filename='assets/upload-icon.svg') }}"
+                      alt="Upload Icon"
+                    />
                   </div>
-                  <span class="text-tooltip">Click or drag file to this area to upload</span>
+                  <div class="text-tooltip">
+                    Click or drag file to this area to upload
+                  </div>
                 </div>
               </div>
 
               <div class="bottom-btn-content-container">
-
                 <div class="message-1">Upload and Transform</div>
 
                 <div id="file-info" class="file-info" style="display: none">
-                  <span id="file-name"></span>
+                  <div id="file-name"></div>
                   <button type="button" id="remove-file" class="remove-file">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 22 22">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 6.176h16M9 3h6m-5 13.765v-6.353m4 6.353v-6.353M15.5 21h-7c-1.105 0-2-.948-2-2.118L6.043 7.28c-.023-.601.43-1.103 1-1.103h9.915c.568 0 1.022.502.999 1.103L17.5 18.882c0 1.17-.895 2.118-2 2.118Z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      fill="none"
+                      viewBox="0 0 22 22"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6.176h16M9 3h6m-5 13.765v-6.353m4 6.353v-6.353M15.5 21h-7c-1.105 0-2-.948-2-2.118L6.043 7.28c-.023-.601.43-1.103 1-1.103h9.915c.568 0 1.022.502.999 1.103L17.5 18.882c0 1.17-.895 2.118-2 2.118Z"
+                      />
                     </svg>
                   </button>
                 </div>
 
                 <div class="buttons-container">
-                  <div class="buttons" id="convert-btn">
-                    Sketch-ify
-                  </div>
+                  <div class="buttons" id="convert-btn">Sketch-ify</div>
                 </div>
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
+          <div class="content"></div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var uploadContainer = document.getElementById("upload-container");
-      var fileInput = document.getElementById("file-input");
-      var fileInfo = document.getElementById("file-info");
-      var fileNameSpan = document.getElementById("file-name");
-      var removeFileButton = document.getElementById("remove-file");
-      var convertBtn = document.getElementById("convert-btn");
-      var uploadForm = document.getElementById("upload-form");
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var uploadContainer = document.getElementById("upload-container");
+        var fileInput = document.getElementById("file-input");
+        var fileInfo = document.getElementById("file-info");
+        var fileNameSpan = document.getElementById("file-name");
+        var removeFileButton = document.getElementById("remove-file");
+        var convertBtn = document.getElementById("convert-btn");
+        var uploadForm = document.getElementById("upload-form");
 
-      uploadContainer.addEventListener("click", function () {
-        fileInput.click();
-      });
+        uploadContainer.addEventListener("click", function () {
+          fileInput.click();
+        });
 
-      uploadContainer.addEventListener("dragover", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        uploadContainer.classList.add("dragover");
-      });
+        uploadContainer.addEventListener("dragover", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          uploadContainer.classList.add("dragover");
+        });
 
-      uploadContainer.addEventListener("dragleave", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        uploadContainer.classList.remove("dragover");
-      });
+        uploadContainer.addEventListener("dragleave", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          uploadContainer.classList.remove("dragover");
+        });
 
-      uploadContainer.addEventListener("drop", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        uploadContainer.classList.remove("dragover");
-        var files = e.dataTransfer.files;
-        if (files.length > 0) {
-          fileInput.files = files;
-          displayFileInfo(files[0]);
+        uploadContainer.addEventListener("drop", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          uploadContainer.classList.remove("dragover");
+          var files = e.dataTransfer.files;
+          if (files.length > 0) {
+            fileInput.files = files;
+            displayFileInfo(files[0]);
+          }
+        });
+
+        fileInput.addEventListener("change", function () {
+          if (fileInput.files.length > 0) {
+            displayFileInfo(fileInput.files[0]);
+          }
+        });
+
+        removeFileButton.addEventListener("click", function () {
+          fileInput.value = "";
+          fileInfo.style.display = "none";
+        });
+
+        convertBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          if (fileInput.files.length > 0) {
+            uploadForm.submit();
+          } else {
+            alert("Please upload a file first.");
+          }
+        });
+
+        function displayFileInfo(file) {
+          fileNameSpan.textContent = file.name;
+          fileInfo.style.display = "flex";
         }
       });
-
-      fileInput.addEventListener("change", function () {
-        if (fileInput.files.length > 0) {
-          displayFileInfo(fileInput.files[0]);
-        }
-      });
-
-      removeFileButton.addEventListener("click", function () {
-        fileInput.value = "";
-        fileInfo.style.display = "none";
-      });
-
-      convertBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        if (fileInput.files.length > 0) {
-          uploadForm.submit();
-        } else {
-          alert("Please upload a file first.");
-        }
-      });
-
-      function displayFileInfo(file) {
-        fileNameSpan.textContent = file.name;
-        fileInfo.style.display = "flex";
-      }
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
