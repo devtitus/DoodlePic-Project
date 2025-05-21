@@ -3,6 +3,7 @@ import os
 import cv2
 import pygame
 import threading
+import time
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
@@ -53,21 +54,45 @@ def upload_form():
 def upload_image():
     if 'file' not in request.files:
         return redirect(request.url)
+    
     file = request.files['file']
+    
     if file.filename == '':
         return redirect(request.url)
+    
+    # Validate file type
+    allowed_extensions = {'png', 'jpg', 'jpeg', 'gif'}
+    if not '.' in file.filename or file.filename.rsplit('.', 1)[1].lower() not in allowed_extensions:
+        return redirect(url_for('upload_form', error='invalid_type'))
+    
+    # Check file size (5MB limit)
+    if len(file.read()) > 5 * 1024 * 1024:  # 5MB in bytes
+        file.seek(0)  # Reset file pointer after reading
+        return redirect(url_for('upload_form', error='file_too_large'))
+    
+    file.seek(0)  # Reset file pointer after validation
+    
+    # Create directories if they don't exist
+    os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+    os.makedirs(app.config['OUTPUT_FOLDER'], exist_ok=True)
+    
     if file:
-        filename = file.filename
-        filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-        file.save(filepath)
+        try:
+            filename = file.filename
+            filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file.save(filepath)
 
-        # Process the image and save the output
-        sketch = sketch_image(filepath)
-        output_filename = 'sketch.png'
-        output_path = os.path.join(app.config['OUTPUT_FOLDER'], output_filename)
-        draw_sketch_pygame(sketch, output_path)
+            # Process the image and save the output
+            sketch = sketch_image(filepath)
+            output_filename = 'sketch_' + str(int(time.time())) + '.png'  # Add timestamp for uniqueness
+            output_path = os.path.join(app.config['OUTPUT_FOLDER'], output_filename)
+            draw_sketch_pygame(sketch, output_path)
 
-        return redirect(url_for('display_output', filename=output_filename))
+            return redirect(url_for('display_output', filename=output_filename))
+        except Exception as e:
+            print(f"Error processing image: {str(e)}")
+            return redirect(url_for('upload_form', error='processing_error'))
+    
     return redirect(request.url)
 
 @app.route('/output/<filename>')

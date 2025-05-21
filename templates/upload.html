@@ -1,188 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Upload Image</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/upload.css') }}"
-    />
-    <!-- <link rel="stylesheet" href="../static/css/upload.css" /> -->
-  </head>
 
-  <body>
-    <div class="bg-container">
-      <div class="right-container">
-        <div class="content-container">
-          <div class="bread-head-para-container">
-            <div class="breadcrumb">
-              <div class="icon-box">
-                <img
-                  src="../static/assets/Img_out-box_light.svg"
-                  alt="Intro-Icon"
-                />
-              </div>
-              <text class="intro-text">Introducing Sketchi-fy</text>
-            </div>
-            <div class="heading-para-container">
-              <h1 class="page-heading">Image to Sketch</h1>
-              <p class="description-para">
-                Lorem ipsum dolor sit amet consectetur. Cursus praesent massa
-                vulputate tincidunt tellus laoreet ultrices velit cras.
-              </p>
-            </div>
+<head>
+  <meta charset="utf-8" />
+  <title>Upload Image</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}" />
+  <!-- <link rel="stylesheet" href="../static/css/upload.css" /> -->
+</head>
+
+<body>
+  <div class="bg-container">
+    <div class="right-container">
+      <div class="content-container">
+        <div class="bread-head-para-container">
+          <div class="breadcrumb">
+            <text class="intro-text">About DoodlePic</text>
           </div>
-          <div class="social-btn-container">
-            <a href="#">
-              <div class="github-icon-box">
-                <img
-                  src="../static/assets/github-mark-white 1.svg"
-                  alt="Github Icon"
-                />
-              </div>
-            </a>
-            <a href="#">
-              <div class="linkedin-icon-box">
-                <img
-                  src="../static/assets/iconmonstr-linkedin-3 1.svg"
-                  alt="LinkedIn Icon"
-                />
-              </div>
-            </a>
+          <div class="heading-para-container">
+            <h1 class="page-heading">Sketch Your Memory</h1>
+            <p class="description-para">
+              Tired of ordinary photos? Create stunning sketches from your memories in seconds.
+            </p>
           </div>
         </div>
-      </div>
-
-      <div class="left-container">
-        <div class="card">
-          <form
-            class="upload-form"
-            id="upload-form"
-            method="post"
-            action="/upload"
-            enctype="multipart/form-data"
-          >
-            <div class="heading-container">
-              <span>Choose Your Image</span>
-              <input
-                type="file"
-                id="file-input"
-                name="file"
-                required
-                style="display: none"
-              />
-              <div class="upload-container" id="upload-container">
-                <div class="inner-upload-container">
-                  <div class="upload-icon-box">
-                    <img
-                      class="upload-icon"
-                      src="{{ url_for('static', filename='assets/upload-icon.svg') }}"
-                      alt="Upload Icon"
-                    />
-                  </div>
-                  <div class="text-tooltip">
-                    Click or drag file to this area to upload
-                  </div>
-                </div>
-              </div>
-
-              <div class="bottom-btn-content-container">
-                <div class="message-1">Upload and Transform</div>
-
-                <div id="file-info" class="file-info" style="display: none">
-                  <div id="file-name"></div>
-                  <button type="button" id="remove-file" class="remove-file">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="22"
-                      fill="none"
-                      viewBox="0 0 22 22"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M4 6.176h16M9 3h6m-5 13.765v-6.353m4 6.353v-6.353M15.5 21h-7c-1.105 0-2-.948-2-2.118L6.043 7.28c-.023-.601.43-1.103 1-1.103h9.915c.568 0 1.022.502.999 1.103L17.5 18.882c0 1.17-.895 2.118-2 2.118Z"
-                      />
-                    </svg>
-                  </button>
-                </div>
-
-                <div class="buttons-container">
-                  <div class="buttons" id="convert-btn">Sketch-ify</div>
-                </div>
-              </div>
+        <div class="social-btn-container">
+          <a href="#">
+            <div class="github-icon-box">
+              <img src="../static/assets/github-mark-white 1.svg" alt="Github Icon" />
             </div>
-          </form>
-          <div class="content"></div>
+          </a>
+          <a href="#">
+            <div class="linkedin-icon-box">
+              <img src="../static/assets/iconmonstr-linkedin-3 1.svg" alt="LinkedIn Icon" />
+            </div>
+          </a>
         </div>
       </div>
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var uploadContainer = document.getElementById("upload-container");
-        var fileInput = document.getElementById("file-input");
-        var fileInfo = document.getElementById("file-info");
-        var fileNameSpan = document.getElementById("file-name");
-        var removeFileButton = document.getElementById("remove-file");
-        var convertBtn = document.getElementById("convert-btn");
-        var uploadForm = document.getElementById("upload-form");
+    <div class="left-container">
+      <div class="card">
+        {% if request.args.get('error') %}
+        <div class="error-message" id="error-message">
+          {% if request.args.get('error') == 'invalid_type' %}
+          Invalid file type. Please upload a JPG, PNG or GIF image.
+          {% elif request.args.get('error') == 'file_too_large' %}
+          File is too large. Maximum size is 5MB.
+          {% elif request.args.get('error') == 'processing_error' %}
+          Error processing your image. Please try a different file.
+          {% else %}
+          An error occurred. Please try again.
+          {% endif %}
+        </div>
+        {% endif %}
+        <form class="upload-form" id="upload-form" method="post" action="/upload" enctype="multipart/form-data">
+          <div class="heading-container">
+            <span>Create Your Sketch</span>
+            <input type="file" id="file-input" name="file" required style="display: none" />
+            <div class="upload-container" id="upload-container">
+              <div class="inner-upload-container">
+                <div class="upload-icon-box">
+                  <img class="upload-icon" src="{{ url_for('static', filename='assets/new_upload.svg') }}"
+                    alt="Upload Icon" />
+                </div>
+                <div class="text-tooltip">
+                  Click to Upload, or Drag & Drop
+                </div>
+              </div>
+            </div>
 
-        uploadContainer.addEventListener("click", function () {
+            <div class="bottom-btn-content-container">
+              <div id="file-info" class="file-info" style="display: none">
+                <div class="file_text_wrapper">
+                  <div id="file-name"></div>
+                  <p class="uploaded_text">Uploaded</p>
+                </div>
+                <button type="button" id="remove-file" class="remove-file">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" fill="none">
+                    <path
+                      d="M6 6.5V18.3C6 19.4201 6 19.9798 6.21799 20.4076C6.40973 20.7839 6.71547 21.0905 7.0918 21.2822C7.5192 21.5 8.07899 21.5 9.19691 21.5H14.8031C15.921 21.5 16.48 21.5 16.9074 21.2822C17.2837 21.0905 17.5905 20.7839 17.7822 20.4076C18 19.9802 18 19.421 18 18.3031V6.5M6 6.5H8M6 6.5H4M8 6.5H16M8 6.5C8 5.56812 8 5.10241 8.15224 4.73486C8.35523 4.24481 8.74432 3.85523 9.23438 3.65224C9.60192 3.5 10.0681 3.5 11 3.5H13C13.9319 3.5 14.3978 3.5 14.7654 3.65224C15.2554 3.85523 15.6447 4.24481 15.8477 4.73486C15.9999 5.1024 16 5.56812 16 6.5M16 6.5H18M18 6.5H20"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="buttons-container">
+                <div class="buttons" id="convert-btn">Create My Sketch</div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="content"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/truncate-filename.js') }}"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var uploadContainer = document.getElementById("upload-container");
+      var fileInput = document.getElementById("file-input");
+      var fileInfo = document.getElementById("file-info");
+      var fileNameSpan = document.getElementById("file-name");
+      var removeFileButton = document.getElementById("remove-file");
+      var convertBtn = document.getElementById("convert-btn");
+      var uploadForm = document.getElementById("upload-form");
+      var isProcessing = false;
+      var hasFile = false;
+
+      // Accepted file types
+      const acceptedFileTypes = ['image/jpeg', 'image/png', 'image/jpg', 'image/gif'];
+      const maxFileSize = 5 * 1024 * 1024; // 5MB
+
+      fileInput.setAttribute('accept', acceptedFileTypes.join(','));
+
+      uploadContainer.addEventListener("click", function () {
+        if (!hasFile && !isProcessing) {
           fileInput.click();
-        });
-
-        uploadContainer.addEventListener("dragover", function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          uploadContainer.classList.add("dragover");
-        });
-
-        uploadContainer.addEventListener("dragleave", function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          uploadContainer.classList.remove("dragover");
-        });
-
-        uploadContainer.addEventListener("drop", function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          uploadContainer.classList.remove("dragover");
-          var files = e.dataTransfer.files;
-          if (files.length > 0) {
-            fileInput.files = files;
-            displayFileInfo(files[0]);
-          }
-        });
-
-        fileInput.addEventListener("change", function () {
-          if (fileInput.files.length > 0) {
-            displayFileInfo(fileInput.files[0]);
-          }
-        });
-
-        removeFileButton.addEventListener("click", function () {
-          fileInput.value = "";
-          fileInfo.style.display = "none";
-        });
-
-        convertBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          if (fileInput.files.length > 0) {
-            uploadForm.submit();
-          } else {
-            alert("Please upload a file first.");
-          }
-        });
-
-        function displayFileInfo(file) {
-          fileNameSpan.textContent = file.name;
-          fileInfo.style.display = "flex";
         }
       });
-    </script>
-  </body>
+
+      uploadContainer.addEventListener("dragover", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (!hasFile && !isProcessing) {
+          uploadContainer.classList.add("dragover");
+        }
+      });
+
+      uploadContainer.addEventListener("dragleave", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        uploadContainer.classList.remove("dragover");
+      });
+
+      uploadContainer.addEventListener("drop", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        uploadContainer.classList.remove("dragover");
+
+        if (hasFile || isProcessing) {
+          return;
+        }
+
+        var files = e.dataTransfer.files;
+        if (files.length > 0) {
+          validateAndDisplayFile(files[0]);
+        }
+      });
+
+      fileInput.addEventListener("change", function () {
+        if (fileInput.files.length > 0) {
+          validateAndDisplayFile(fileInput.files[0]);
+        }
+      });
+
+      removeFileButton.addEventListener("click", function () {
+        if (!isProcessing) {
+          resetFileUpload();
+        }
+      });
+
+      convertBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (fileInput.files.length > 0 && !isProcessing) {
+          isProcessing = true;
+          setProcessingState(true);
+          uploadForm.submit();
+        } else if (!hasFile) {
+          alert("Please upload a file first.");
+        }
+      });
+
+      function validateAndDisplayFile(file) {
+        // Check file type
+        if (!acceptedFileTypes.includes(file.type)) {
+          alert("Invalid file type. Please upload a JPG, PNG or GIF image.");
+          resetFileUpload();
+          return;
+        }
+
+        // Check file size
+        if (file.size > maxFileSize) {
+          alert("File is too large. Maximum size is 5MB.");
+          resetFileUpload();
+          return;
+        }
+
+        fileInput.files = file.type ? new DataTransfer().files : new FileList(); // Clear
+
+        // Create a new DataTransfer object and add the file to it
+        const dataTransfer = new DataTransfer();
+        dataTransfer.items.add(file);
+
+        // Set the files property to the new FileList object
+        fileInput.files = dataTransfer.files;
+
+        displayFileInfo(file);
+        hasFile = true;
+      }
+
+      function displayFileInfo(file) {
+        fileNameSpan.textContent = file.name;
+        fileInfo.style.display = "flex";
+        uploadContainer.classList.add("has-file");
+
+        // Apply filename truncation
+        truncateFileName(file.name, 10); // Show first 10 chars and last 4 chars
+      }
+
+      function setProcessingState(isProcessing) {
+        if (isProcessing) {
+          convertBtn.textContent = "Processing...";
+          convertBtn.classList.add("processing");
+          convertBtn.style.cursor = "wait";
+          uploadContainer.style.opacity = "0.6";
+          removeFileButton.style.pointerEvents = "none";
+        } else {
+          convertBtn.textContent = "Create My Sketch";
+          convertBtn.classList.remove("processing");
+          convertBtn.style.cursor = "pointer";
+          uploadContainer.style.opacity = "1";
+          removeFileButton.style.pointerEvents = "auto";
+        }
+      }
+
+      function resetFileUpload() {
+        fileInput.value = "";
+        fileInfo.style.display = "none";
+        uploadContainer.classList.remove("has-file");
+        hasFile = false;
+        isProcessing = false;
+        setProcessingState(false);
+      }
+    });
+  </script>
+</body>
+
 </html>

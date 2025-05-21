@@ -1,0 +1,118 @@
+/* Satoshi Font Family */
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/satoshi/Satoshi-Light.woff2") format("woff2"),
+    url("../fonts/satoshi/Satoshi-Light.woff") format("woff"),
+    url("../fonts/satoshi/Satoshi-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/satoshi/Satoshi-LightItalic.woff2") format("woff2"),
+    url("../fonts/satoshi/Satoshi-LightItalic.woff") format("woff"),
+    url("../fonts/satoshi/Satoshi-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/satoshi/Satoshi-Regular.woff2") format("woff2"),
+    url("../fonts/satoshi/Satoshi-Regular.woff") format("woff"),
+    url("../fonts/satoshi/Satoshi-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/satoshi/Satoshi-Italic.woff2") format("woff2"),
+    url("../fonts/satoshi/Satoshi-Italic.woff") format("woff"),
+    url("../fonts/satoshi/Satoshi-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/satoshi/Satoshi-Medium.woff2") format("woff2"),
+    url("../fonts/satoshi/Satoshi-Medium.woff") format("woff"),
+    url("../fonts/satoshi/Satoshi-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/satoshi/Satoshi-Bold.woff2") format("woff2"),
+    url("../fonts/satoshi/Satoshi-Bold.woff") format("woff"),
+    url("../fonts/satoshi/Satoshi-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/satoshi/Satoshi-Black.woff2") format("woff2"),
+    url("../fonts/satoshi/Satoshi-Black.woff") format("woff"),
+    url("../fonts/satoshi/Satoshi-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Excon Font Family */
+@font-face {
+  font-family: "Excon";
+  src: url("../fonts/excon/Excon-Thin.woff2") format("woff2"),
+    url("../fonts/excon/Excon-Thin.woff") format("woff"),
+    url("../fonts/excon/Excon-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Excon";
+  src: url("../fonts/excon/Excon-Light.woff2") format("woff2"),
+    url("../fonts/excon/Excon-Light.woff") format("woff"),
+    url("../fonts/excon/Excon-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Excon";
+  src: url("../fonts/excon/Excon-Regular.woff2") format("woff2"),
+    url("../fonts/excon/Excon-Regular.woff") format("woff"),
+    url("../fonts/excon/Excon-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Excon";
+  src: url("../fonts/excon/Excon-Medium.woff2") format("woff2"),
+    url("../fonts/excon/Excon-Medium.woff") format("woff"),
+    url("../fonts/excon/Excon-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Excon";
+  src: url("../fonts/excon/Excon-Bold.woff2") format("woff2"),
+    url("../fonts/excon/Excon-Bold.woff") format("woff"),
+    url("../fonts/excon/Excon-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Excon";
+  src: url("../fonts/excon/Excon-Black.woff2") format("woff2"),
+    url("../fonts/excon/Excon-Black.woff") format("woff"),
+    url("../fonts/excon/Excon-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
