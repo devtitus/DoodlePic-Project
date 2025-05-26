@@ -480,3 +480,79 @@ body {
   line-height: 20px;
   text-align: center;
 }
+@media screen and (min-width: 1024px) {
+  .card {
+    width: calc(288px + 1vw);
+    max-width: calc(288px + 1vw);
+    padding: calc(11px + 1vw);
+    border-radius: calc(2.6px + 1vw);
+  }
+
+  .heading-container span {
+    font-size: calc(5.8px + 1vw);
+    line-height: normal;
+  }
+
+  .upload-container {
+    padding: calc(30.86px + 1vw) calc(21.8px + 1vw);
+    gap: calc(8px + 1vw);
+    border-radius: calc(-2px + 1vw);
+  }
+
+  .buttons {
+    padding: calc(0.7px + 1vw) 0;
+    border-radius: calc(-3px + 1vw);
+    font-size: calc(4px + 1vw);
+    line-height: normal;
+    letter-spacing: 0.96px;
+  }
+
+  .text-tooltip,
+  .intro-text {
+    font-size: calc(4px + 1vw);
+    line-height: normal;
+  }
+
+  .upload-icon {
+    width: calc(12px + 1vw);
+    height: calc(12px + 1vw);
+  }
+
+  .page-heading {
+    font-size: calc(22px + 1vw);
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .description-para {
+    font-size: calc(6px + 1vw);
+    line-height: normal;
+  }
+
+  .heading-para-container {
+    gap: calc(-4px + 1vw);
+  }
+
+  .breadcrumb {
+    padding: calc(-3px + 1vw) calc(2px + 1vw);
+  }
+
+  .bread-head-para-container,
+  .content-container {
+    gap: calc(6px + 1vw);
+  }
+
+  .github-icon-box,
+  .linkedin-icon-box {
+    width: calc(6px + 1vw);
+    height: calc(6px + 1vw);
+    padding: calc(2px + 1vw);
+    border-radius: calc(-4px + 1vw);
+  }
+
+  .github-icon-box img,
+  .linkedin-icon-box img {
+    width: calc(8px + 1vw);
+    height: calc(8px + 1vw);
+  }
+}
