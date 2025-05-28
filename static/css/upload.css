@@ -480,6 +480,8 @@ body {
   line-height: 20px;
   text-align: center;
 }
+
+/* Responsive for 1024px */
 @media screen and (min-width: 1024px) {
   .card {
     width: calc(288px + 1vw);
@@ -554,5 +556,333 @@ body {
   .linkedin-icon-box img {
     width: calc(8px + 1vw);
     height: calc(8px + 1vw);
+  }
+
+  .file-info span {
+    font-size: 16px;
+  }
+
+  .uploaded_text {
+    font-size: 14px;
+  }
+
+  .remove-file {
+    padding: 4px;
+    border-radius: 6px;
+  }
+
+  .remove-file svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Responsive for 1280px */
+@media screen and (min-width: 1280px) {
+  .card {
+    width: calc(287px + 1vw);
+    max-width: calc(287px + 1vw);
+    max-height: calc(337px + 1vw);
+    padding: calc(13px + 1vw);
+    border-radius: calc(3.2px + 1vw);
+  }
+
+  .heading-container span {
+    font-size: calc(5.2px + 1vw);
+    line-height: normal;
+  }
+
+  .upload-container {
+    padding: calc(28.5px + 1vw) calc(27.2px + 1vw);
+    gap: calc(-6px + 1vw);
+    border-radius: calc(-2.13px + 1vw);
+  }
+
+  .buttons {
+    padding: calc(-2.13px + 1vw) 0;
+    border-radius: calc(-7px + 1vw);
+    font-size: calc(1.2px + 1vw);
+    line-height: normal; /* 133.333% */
+  }
+
+  .intro-text,
+  .text-tooltip {
+    font-size: calc(1.2px + 1vw);
+    line-height: normal; /* 130% */
+  }
+
+  .upload-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .page-heading {
+    font-size: calc(19.2px + 1vw);
+    line-height: normal; /* 114.286% */
+  }
+
+  .description-para {
+    font-size: calc(3.2px + 1vw);
+    line-height: normal; /* 130% */
+  }
+
+  .heading-para-container {
+    gap: calc(-4.8px + 1vw);
+  }
+
+  .breadcrumb {
+    padding: calc(-8.8px + 1vw) calc(3.2px + 1vw);
+    border-radius: 20px;
+  }
+
+  .bread-head-para-container,
+  .content-container {
+    gap: calc(7.2px + 1vw);
+  }
+
+  .github-icon-box,
+  .linkedin-icon-box {
+    display: flex;
+    width: calc(7.2px + 1vw);
+    height: calc(7.2px + 1vw);
+    padding: calc(-2.8px + 1vw);
+    border-radius: calc(-7.46px + 1vw);
+  }
+
+  .github-icon-box img,
+  .linkedin-icon-box img {
+    width: calc(7.2px + 1vw);
+    height: calc(7.2px + 1vw);
+  }
+
+  .file-info span {
+    font-size: calc(3.2px + 1vw);
+  }
+
+  .uploaded_text {
+    font-size: calc(1.2px + 1vw);
+  }
+
+  .remove-file {
+    padding: calc(-8.8px + 1vw);
+    border-radius: calc(-6.8px + 1vw);
+  }
+
+  .remove-file svg {
+    width: calc(7.2px + 1vw);
+    height: calc(7.2px + 1vw);
+  }
+}
+
+/* Responsive for 1536px */
+@media screen and (min-width: 1536px) {
+  .card {
+    width: 400px;
+    max-width: 400px;
+    max-height: 450px;
+    padding: 40px;
+    border-radius: 24px;
+  }
+
+  .heading-container span {
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  .upload-container {
+    padding: 77px 60px;
+    gap: 10px;
+    border-radius: 16px;
+  }
+
+  .buttons {
+    padding: 14px 0;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: normal; /* 133.333% */
+  }
+
+  .intro-text,
+  .text-tooltip {
+    font-size: 16px;
+    line-height: normal; /* 130% */
+  }
+
+  .upload-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .page-heading {
+    font-size: 48px;
+    line-height: normal; /* 114.286% */
+  }
+
+  .description-para {
+    font-size: 18px;
+    line-height: normal; /* 130% */
+  }
+
+  .heading-para-container {
+    gap: 16px;
+  }
+
+  .breadcrumb {
+    padding: 6px 24px;
+    border-radius: 20px;
+  }
+
+  .bread-head-para-container,
+  .content-container {
+    gap: 24px;
+  }
+
+  .github-icon-box,
+  .linkedin-icon-box {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .github-icon-box img,
+  .linkedin-icon-box img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .file-info span {
+    font-size: 16px;
+  }
+
+  .file_text_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .uploaded_text {
+    font-size: 14px;
+  }
+
+  .remove-file {
+    padding: 4px;
+    border-radius: 6px;
+  }
+
+  .remove-file svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Responsive for 1920px */
+@media screen and (min-width: 1920px) {
+  .card {
+    width: 400px;
+    max-width: 400px;
+    max-height: 450px;
+    padding: 40px;
+    border-radius: 24px;
+  }
+
+  .heading-container span {
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  .upload-container {
+    padding: 77px 60px;
+    gap: 10px;
+    border-radius: 16px;
+  }
+
+  .buttons {
+    padding: 14px 0;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: normal; /* 133.333% */
+  }
+
+  .intro-text,
+  .text-tooltip {
+    font-size: 16px;
+    line-height: normal; /* 130% */
+  }
+
+  .upload-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .page-heading {
+    font-size: 48px;
+    line-height: normal; /* 114.286% */
+  }
+
+  .description-para {
+    font-size: 18px;
+    line-height: normal; /* 130% */
+  }
+
+  .heading-para-container {
+    gap: 16px;
+  }
+
+  .breadcrumb {
+    padding: 6px 24px;
+    border-radius: 20px;
+  }
+
+  .bread-head-para-container,
+  .content-container {
+    gap: 24px;
+  }
+
+  .github-icon-box,
+  .linkedin-icon-box {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .github-icon-box img,
+  .linkedin-icon-box img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .file-info span {
+    font-size: 16px;
+  }
+
+  .file_text_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .uploaded_text {
+    font-family: "Satoshi", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    color: var(--primary);
+    margin: 0;
+  }
+
+  .remove-file {
+    display: flex;
+    padding: 4px;
+    align-items: center;
+    border-radius: 6px;
+    background: var(--black);
+    cursor: pointer;
+  }
+
+  .remove-file svg {
+    width: 20px;
+    height: 20px;
   }
 }
