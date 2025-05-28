@@ -677,83 +677,83 @@ body {
 /* Responsive for 1536px */
 @media screen and (min-width: 1536px) {
   .card {
-    width: 400px;
-    max-width: 400px;
-    max-height: 450px;
-    padding: 40px;
-    border-radius: 24px;
+    width: calc(384px + 1vw);
+    max-width: calc(384px + 1vw);
+    max-height: calc(434px + 1vw);
+    padding: calc(24px + 1vw);
+    border-radius: calc(8.64px + 1vw);
   }
 
   .heading-container span {
-    font-size: 24px;
+    font-size: calc(8.64px + 1vw);
     line-height: normal;
   }
 
   .upload-container {
-    padding: 77px 60px;
-    gap: 10px;
-    border-radius: 16px;
+    padding: calc(61.64px + 1vw) calc(44.64px + 1vw);
+    gap: calc(-5.36px + 1vw);
+    border-radius: calc(0.64px + 1vw);
   }
 
   .buttons {
-    padding: 14px 0;
-    border-radius: 8px;
-    font-size: 16px;
+    padding: calc(-1.36px + 1vw) 0;
+    border-radius: calc(-7.36px + 1vw);
+    font-size: calc(0.64px + 1vw);
     line-height: normal; /* 133.333% */
   }
 
   .intro-text,
   .text-tooltip {
-    font-size: 16px;
+    font-size: calc(2.64px + 1vw);
     line-height: normal; /* 130% */
   }
 
   .upload-icon {
-    width: 32px;
-    height: 32px;
+    width: calc(8.64px + 1vw);
+    height: calc(8.64px + 1vw);
   }
 
   .page-heading {
-    font-size: 48px;
+    font-size: calc(32.64px + 1vw);
     line-height: normal; /* 114.286% */
   }
 
   .description-para {
-    font-size: 18px;
+    font-size: calc(2.64px + 1vw);
     line-height: normal; /* 130% */
   }
 
   .heading-para-container {
-    gap: 16px;
+    gap: calc(0.64px + 1vw);
   }
 
   .breadcrumb {
-    padding: 6px 24px;
-    border-radius: 20px;
+    padding: calc(-9.36px + 1vw) calc(8.64px + 1vw);
+    border-radius: calc(4.64px + 1vw);
   }
 
   .bread-head-para-container,
   .content-container {
-    gap: 24px;
+    gap: calc(8.64px + 1vw);
   }
 
   .github-icon-box,
   .linkedin-icon-box {
     display: flex;
-    width: 24px;
-    height: 24px;
-    padding: 10px;
-    border-radius: 8px;
+    width: calc(8.64px + 1vw);
+    height: calc(8.64px + 1vw);
+    padding: calc(-5.36px + 1vw);
+    border-radius: calc(-7.36px + 1vw);
   }
 
   .github-icon-box img,
   .linkedin-icon-box img {
-    width: 24px;
-    height: 24px;
+    width: calc(8.64px + 1vw);
+    height: calc(8.64px + 1vw);
   }
 
   .file-info span {
-    font-size: 16px;
+    font-size: calc(2.64px + 1vw);
   }
 
   .file_text_wrapper {
@@ -762,17 +762,17 @@ body {
   }
 
   .uploaded_text {
-    font-size: 14px;
+    font-size: calc(0.64px + 1vw);
   }
 
   .remove-file {
-    padding: 4px;
-    border-radius: 6px;
+    padding: calc(-11.36px + 1vw);
+    border-radius: calc(-9.36px + 1vw);
   }
 
   .remove-file svg {
-    width: 20px;
-    height: 20px;
+    width: calc(8.64px + 1vw);
+    height: calc(8.64px + 1vw);
   }
 }
 
@@ -806,7 +806,7 @@ body {
 
   .intro-text,
   .text-tooltip {
-    font-size: 16px;
+    font-size: 18px;
     line-height: normal; /* 130% */
   }
 
@@ -865,7 +865,7 @@ body {
 
   .uploaded_text {
     font-family: "Satoshi", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     line-height: normal;
     color: var(--primary);
@@ -882,7 +882,7 @@ body {
   }
 
   .remove-file svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
 }
