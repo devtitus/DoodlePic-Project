@@ -548,7 +548,7 @@ body {
   .linkedin-icon-box {
     width: calc(6px + 1vw);
     height: calc(6px + 1vw);
-    padding: calc(2px + 1vw);
+    padding: calc(0px + 1vw);
     border-radius: calc(-4px + 1vw);
   }
 
@@ -661,6 +661,103 @@ body {
 
   .uploaded_text {
     font-size: calc(1.2px + 1vw);
+  }
+
+  .remove-file {
+    padding: calc(-8.8px + 1vw);
+    border-radius: calc(-6.8px + 1vw);
+  }
+
+  .remove-file svg {
+    width: calc(7.2px + 1vw);
+    height: calc(7.2px + 1vw);
+  }
+}
+
+/* Responsive for 1280px */
+@media screen and (min-width: 1440px) {
+  .card {
+    width: calc(325px + 1vw);
+    max-width: calc(325px + 1vw);
+    max-height: calc(400px + 1vw);
+    padding: calc(13px + 1vw);
+    border-radius: calc(3.2px + 1vw);
+  }
+
+  .heading-container span {
+    font-size: calc(5.2px + 1vw);
+    line-height: normal;
+  }
+
+  .upload-container {
+    padding: calc(48.5px + 1vw) calc(27.2px + 1vw);
+    gap: calc(-6px + 1vw);
+    border-radius: calc(-2.13px + 1vw);
+  }
+
+  .buttons {
+    padding: calc(-2.13px + 1vw) 0;
+    border-radius: calc(-7px + 1vw);
+    font-size: calc(1.2px + 1vw);
+    line-height: normal; /* 133.333% */
+  }
+
+  .intro-text,
+  .text-tooltip {
+    font-size: calc(1.2px + 1vw);
+    line-height: normal; /* 130% */
+  }
+
+  .upload-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .page-heading {
+    font-size: calc(19.2px + 1vw);
+    line-height: normal; /* 114.286% */
+  }
+
+  .description-para {
+    font-size: calc(3.2px + 1vw);
+    line-height: normal; /* 130% */
+  }
+
+  .heading-para-container {
+    gap: calc(-4.8px + 1vw);
+  }
+
+  .breadcrumb {
+    padding: calc(-8.8px + 1vw) calc(3.2px + 1vw);
+    border-radius: 20px;
+  }
+
+  .bread-head-para-container,
+  .content-container {
+    gap: calc(7.2px + 1vw);
+  }
+
+  .github-icon-box,
+  .linkedin-icon-box {
+    display: flex;
+    width: calc(7.2px + 1vw);
+    height: calc(7.2px + 1vw);
+    padding: calc(-4.8px + 1vw);
+    border-radius: calc(-7.46px + 1vw);
+  }
+
+  .github-icon-box img,
+  .linkedin-icon-box img {
+    width: calc(7.2px + 1vw);
+    height: calc(7.2px + 1vw);
+  }
+
+  .file-info span {
+    font-size: calc(3.2px + 1vw);
+  }
+
+  .uploaded_text {
+    font-size: calc(-0.2px + 1vw);
   }
 
   .remove-file {
