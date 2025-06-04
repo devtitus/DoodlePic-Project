@@ -103,5 +103,5 @@ def display_output(filename):
 def send_output(filename):
     return send_from_directory(app.config['OUTPUT_FOLDER'], filename)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)

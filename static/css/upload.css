@@ -481,6 +481,204 @@ body {
   text-align: center;
 }
 
+/* ************ Mobiles ************ */
+/* Responsive for 320px to 767px */
+@media (min-width: 320px) and (max-width: 767px) {
+  .bg-container {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .right-container {
+    display: flex;
+    padding: 0px calc(16.8px + 1vw);
+    flex-direction: column;
+    height: 100svh;
+    min-height: 100svh;
+  }
+
+  .content-container {
+    gap: calc(20.8 + 1vw);
+  }
+
+  .bread-head-para-container {
+    gap: calc(16.8px + 1vw);
+  }
+
+  .breadcrumb {
+    padding: calc(0.8px + 1vw) calc(12.8px + 1vw);
+  }
+
+  .heading-para-container {
+    gap: calc(4.8px + 1vw);
+  }
+
+  .social-btn-container {
+    gap: calc(8.8px + 1vw);
+  }
+
+  .github-icon-box,
+  .linkedin-icon-box {
+    width: calc(16.8px + 1vw);
+    height: calc(16.8px + 1vw);
+    padding: calc(6.8px + 1vw);
+    border-radius: calc(2.8px + 1vw);
+  }
+
+  .github-icon-box:hover,
+  .linkedin-icon-box:hover {
+    transform: translateY(0px);
+  }
+
+  .github-icon-box img,
+  .linkedin-icon-box img {
+    width: calc(16.8px + 1vw);
+    height: calc(16.8px + 1vw);
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    max-height: 450px;
+    padding: calc(22.8px + 1vw);
+    align-items: flex-start;
+    border-radius: calc(12.8px + 1vw);
+  }
+
+  .heading-container {
+    gap: calc(12.8px + 1vw);
+  }
+
+  .heading-container span {
+    font-size: calc(14.8px + 1vw);
+    line-height: calc(20.8px + 1vw); /* 128.571% */
+  }
+
+  .upload-form {
+    width: 100%;
+    gap: calc(16.8px + 1vw);
+  }
+
+  .upload-icon {
+    width: calc(28.8px + 1vw);
+    height: calc(28.8px + 1vw);
+  }
+
+  .message-1 {
+    font-size: calc(12.8px + 1vw);
+    line-height: calc(17.6px + 1vw); /* 130% */
+  }
+
+  .file-info span {
+    font-size: calc(12.8px + 1vw);
+  }
+
+  .uploaded_text {
+    font-size: calc(10.8px + 1vw);
+  }
+
+  .remove-file {
+    padding: calc(0.8px + 1vw);
+    border-radius: calc(2.8px + 1vw);
+  }
+
+  .remove-file svg {
+    width: calc(16.8px + 1vw);
+    height: calc(16.8px + 1vw);
+  }
+
+  .page-heading {
+    font-size: calc(22.8px + 1vw);
+    line-height: calc(28.8px + 1vw); /* 114.286% */
+  }
+
+  .intro-text {
+    font-size: calc(8.8px + 1vw);
+    line-height: calc(14.8px + 1vw); /* 130% */
+  }
+
+  .description-para {
+    font-size: calc(12.8px + 1vw);
+    letter-spacing: 0.48px;
+    line-height: calc(18.8px + 1vw); /* 130% */
+  }
+
+  .left-container {
+    padding: calc(16.8px + 1vw) calc(16.8px + 1vw) 0px calc(16.8px + 1vw);
+    height: 100svh;
+    min-height: 100svh;
+    gap: calc(6.8px + 1vw);
+    align-items: flex-start;
+  }
+
+  .inner-small-container {
+    width: 416px;
+    gap: calc(12.8px + 1vw);
+  }
+
+  .upload-container {
+    padding: calc(60.8px + 1vw) calc(16.8px + 1vw);
+    gap: calc(4.8px + 1vw);
+    border-radius: calc(8.8px + 1vw);
+  }
+
+  .upload-icon-box {
+    padding: calc(2.8px + 1vw);
+    border-radius: calc(2.8px + 1vw);
+  }
+
+  .upload-icon {
+    width: calc(20.8px + 1vw);
+    height: calc(20.8px + 1vw);
+    flex-shrink: 0;
+  }
+
+  .text-tooltip {
+    font-size: calc(10.8px + 1vw);
+    font-weight: 500;
+    line-height: calc(16.8px + 1vw); /* 133.333% */
+  }
+
+  .text-tooltip:hover {
+    text-decoration-line: none;
+  }
+
+  .bottom-btn-content-container {
+    gap: calc(20.8px + 1vw);
+  }
+
+  .buttons {
+    padding: calc(8.8px + 1vw) 0;
+    border-radius: calc(2.8px + 1vw);
+    font-size: calc(10.8px + 1vw);
+    line-height: calc(16.8px + 1vw); /* 133.333% */
+  }
+
+  #file-name {
+    font-size: calc(140.8px + 1vw);
+    line-height: calc(20.8px + 1vw); /* 133.333% */
+    max-width: 200px;
+  }
+
+  .error-message {
+    border-radius: calc(2.8px + 1vw);
+    padding: calc(2.8px + 1vw) calc(8.8px + 1vw);
+    margin-bottom: calc(16.8px + 1vw);
+    font-size: calc(10.8px + 1vw);
+    line-height: calc(16.8px + 1vw);
+  }
+}
+
+/* ************ Tablets ************ */
+/* Responsive for 768px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Responsive for 992px */
+@media screen and (min-width: 992px) and (max-width: 1023px) {
+}
+
+/* ************ Desktops ************ */
 /* Responsive for 1024px */
 @media screen and (min-width: 1024px) {
   .card {
