@@ -32,7 +32,6 @@
       </div>
     </div>
   </div>
-
   <script>
     function downloadImage() {
       const downloadMessage = document.getElementById("downloadMessage");
@@ -41,7 +40,18 @@
       downloadLink.download = "sketch.png";
       downloadLink.click();
       downloadMessage.style.display = "block";
+
+      // Hide message after 3 seconds
+      setTimeout(() => {
+        downloadMessage.style.display = "none";
+      }, 3000);
     }
+
+    // Clean up when user navigates away (optional)
+    window.addEventListener('beforeunload', function () {
+      // This will trigger cleanup on next page load
+      fetch('/cleanup', { method: 'POST' }).catch(() => { });
+    });
   </script>
 </body>
 
