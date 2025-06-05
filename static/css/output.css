@@ -1,5 +1,16 @@
+@import url("./fonts.css");
+
 :root {
-  --primary-font: "Inter", sans-serif;
+  --black: #020202;
+  --white: #fff;
+  --egypt: #e1caa5;
+  --seaform: #fef9deee;
+  --p-100: #ec9396;
+  --p-200: #dd3c42;
+  --p-300: #c32229;
+  --primary: #991b20;
+  --p-500: #6c1317;
+  --p-600: #410b0e;
 }
 
 body {
@@ -7,7 +18,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background: linear-gradient(90deg, #050505 0%, #241228 100%);
+  background: var(--egypt);
 }
 
 .container {
@@ -20,11 +31,13 @@ body {
 
 .box {
   display: flex;
-  width: 480px;
+  width: 100%;
   height: 450px;
   align-items: center;
-  border-radius: 24px;
-  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+  align-self: stretch;
+  border-radius: 16px;
+  background: #fafafa;
+  border: 1px solid var(--primary);
 }
 
 .box img {
@@ -36,28 +49,19 @@ body {
 .box-link-container {
   display: flex;
   flex-direction: column;
-  padding: 78px 121px;
+  width: 550px;
+  height: 550px;
+  padding: 60px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  align-self: stretch;
-  border-radius: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(2px);
-}
-
-h1 {
-  font-family: var(--primary-font);
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 20px;
+  border-radius: 24px;
+  border: 1px solid var(--primary);
+  background: rgba(153, 27, 32, 0.1);
+  box-shadow: 10px 12px 0px 0px var(--p-500);
 }
 
 .link {
   width: 100%;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,90 +71,87 @@ h1 {
 
 a {
   text-decoration: none;
-  color: #fff;
 }
 
 .button-container {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
   align-items: center;
   align-self: stretch;
 }
 
-button {
+.upload-another {
+  width: 20%;
+  display: flex;
+  padding: 17px 64px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+  background: rgba(254, 249, 222, 0.5);
+  color: var(--primary);
+  font-family: "Excon Variable";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 130% */
+  box-shadow: 3px 3px 0px 0px var(--primary);
+}
+
+.upload-another:hover {
+  background: var(--seaform);
+  box-shadow: 3px 3px 0px 0px var(--p-500);
+  transition: all 0.2s ease;
+}
+
+.upload-another:active {
+  box-shadow: 1px 1px 0px 0px var(--p-500);
+  transform: translate(2px, 2px);
+  transition: all 0.1s ease;
+}
+
+.download-btn {
+  width: 80%;
   display: flex;
   padding: 17px 73px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   border-radius: 8px;
-  color: #fff;
-  background: transparent;
-}
-
-button:active {
-  transform: scale(0.95);
-}
-
-.upload-another-btn {
-  color: #fff;
-  border: 0.5px solid #fff;
-  border-radius: 8px;
-}
-
-.upload-another-btn:hover {
-  border: 1px solid #fff;
-  background-color: #241228;
-  border-radius: 8px;
-}
-
-.upload-another-btn:hover a {
-  color: #fff;
-}
-
-.download-icon {
-  width: 16px;
-  height: 16px;
-  color: black;
-}
-
-.download-icon path {
-  stroke: currentColor;
-}
-
-.download-btn {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 10px;
-  background-color: #fff;
-  color: black;
-  font-family: var(--primary-font);
-  border: 0.5px solid #fff;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: var(--seaform);
+  font-family: "Excon Variable";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 130% */
+  box-shadow: 3px 3px 0px 0px var(--seaform);
+  cursor: pointer;
 }
 
 .download-btn:hover {
-  background-color: #241228;
-  border-radius: 8px;
-  color: #fff;
-  border: 0.5px solid #010101;
+  border: 1px solid var(--primary);
+  transition: all 0.2s ease;
+  background: var(--p-500);
+}
+
+.download-btn:active {
+  box-shadow: 1px 1px 0px 0px var(--seaform);
+  transform: translate(2px, 2px);
+  transition: all 0.1s ease;
 }
 
 .download-btn:hover .download-icon {
   color: #fff;
 }
 
-span {
-  font-family: var(--primary-font);
-  font-size: 1em;
-}
-
 .download-message {
-  margin-top: 10px;
-  color: #4caf50;
-  font-size: 14px;
+  margin-top: 20px;
+  color: var(--primary);
+  font-size: 18px;
   display: none;
-  font-family: var(--primary-font);
+  font-family: "Excon Variable";
   text-align: center;
 }
 
@@ -163,13 +164,43 @@ span {
 }
 
 .output-heading {
-  color: #fff;
+  color: var(--primary);
   text-align: center;
-  font-family: "Barlow", sans-serif;
-  font-size: 32px;
+  font-family: "Excon Variable";
+  font-size: 40px;
   font-style: normal;
   font-weight: 500;
-  line-height: 41.6px; /* 130% */
-  align-self: stretch;
+  line-height: 48px; /* 120% */
   margin: 0;
+}
+
+/* ************ Mobiles ************ */
+/* Responsive for 320px to 767px */
+@media (min-width: 320px) and (max-width: 767px) {
+}
+
+/* ************ Tablets ************ */
+/* Responsive for 768px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* ************ Desktops ************ */
+/* Responsive for 1024px */
+@media screen and (min-width: 1024px) {
+}
+
+/* Responsive for 1280px */
+@media screen and (min-width: 1280px) {
+}
+
+/* Responsive for 1280px */
+@media screen and (min-width: 1440px) {
+}
+
+/* Responsive for 1536px */
+@media screen and (min-width: 1536px) {
+}
+
+/* Responsive for 1920px */
+@media screen and (min-width: 1920px) {
 }
