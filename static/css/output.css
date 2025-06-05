@@ -142,10 +142,6 @@ a {
   transition: all 0.1s ease;
 }
 
-.download-btn:hover .download-icon {
-  color: #fff;
-}
-
 .download-message {
   margin-top: 20px;
   color: var(--primary);
@@ -187,20 +183,472 @@ a {
 /* ************ Desktops ************ */
 /* Responsive for 1024px */
 @media screen and (min-width: 1024px) {
+  .box {
+    height: calc(229.8px + 1vw);
+    border-radius: calc(1.8px + 1vw);
+  }
+
+  .box-link-container {
+    width: calc(283.13px + 1vw);
+    height: calc(283.13px + 1vw);
+    padding: calc(21.8px + 1vw);
+    border-radius: calc(5.8px + 1vw);
+    box-shadow: 8px 10px 0px 0px var(--p-500);
+  }
+
+  .link {
+    margin-top: calc(21.8px + 1vw);
+  }
+
+  .button-container {
+    gap: calc(5.8px + 1vw);
+  }
+
+  .upload-another {
+    width: 20%;
+    padding: calc(-1.6px + 1vw) calc(23.93px + 1vw);
+    border-radius: calc(-6.2px + 1vw);
+    font-size: calc(3.2px + 1vw);
+    line-height: calc(11.8px + 1vw); /* 130% */
+    box-shadow: 3px 3px 0px 0px var(--primary);
+  }
+
+  .upload-another:hover {
+    background: rgba(254, 249, 222, 0.5);
+    box-shadow: 3px 3px 0px 0px var(--primary);
+    transition: all 0.2s ease;
+  }
+
+  .upload-another:active {
+    box-shadow: 1px 1px 0px 0px var(--p-500);
+    transform: translate(2px, 2px);
+    transition: all 0.1s ease;
+  }
+
+  .download-btn {
+    width: 80%;
+    padding: calc(-1.6px + 1vw) calc(8.93px + 1vw);
+    border-radius: calc(-6.2px + 1vw);
+    font-size: calc(3.2px + 1vw);
+    line-height: calc(11.8px + 1vw); /* 130% */
+    box-shadow: 3px 3px 0px 0px var(--seaform);
+  }
+
+  .download-btn:hover {
+    border: 1px solid var(--primary);
+    transition: all 0.2s ease;
+    background: var(--primary);
+  }
+
+  .download-btn:active {
+    box-shadow: 1px 1px 0px 0px var(--seaform);
+    transform: translate(2px, 2px);
+    transition: all 0.1s ease;
+  }
+
+  .download-message {
+    margin-top: calc(7.8px + 1vw);
+    font-size: calc(3.8px + 1vw);
+  }
+
+  .card-container {
+    gap: calc(13.8px + 1vw);
+  }
+
+  .output-heading {
+    font-size: calc(13.8px + 1vw);
+    line-height: calc(21.8px + 1vw); /* 120% */
+  }
 }
 
 /* Responsive for 1280px */
 @media screen and (min-width: 1280px) {
+  .box {
+    height: calc(287px + 1vw);
+    border-radius: calc(-4.8px + 1vw);
+  }
+
+  .box-link-container {
+    width: calc(353px + 1vw);
+    height: calc(353px + 1vw);
+    padding: calc(27.2px + 1vw);
+    border-radius: calc(3.2px + 1vw);
+    box-shadow: 8px 10px 0px 0px var(--p-500);
+  }
+
+  .link {
+    margin-top: calc(11.2px + 1vw);
+  }
+
+  .button-container {
+    gap: calc(3.2px + 1vw);
+  }
+
+  .upload-another {
+    width: 20%;
+    padding: calc(-1.46px + 1vw) calc(29.86px + 1vw);
+    border-radius: calc(-8.8px + 1vw);
+    font-size: calc(3.2px + 1vw);
+    line-height: calc(11.2px + 1vw); /* 130% */
+    box-shadow: 3px 3px 0px 0px var(--primary);
+  }
+
+  .upload-another:hover {
+    background: rgba(254, 249, 222, 0.5);
+    box-shadow: 3px 3px 0px 0px var(--primary);
+    transition: all 0.2s ease;
+  }
+
+  .upload-another:active {
+    box-shadow: 1px 1px 0px 0px var(--p-500);
+    transform: translate(2px, 2px);
+    transition: all 0.1s ease;
+  }
+
+  .download-btn {
+    width: 80%;
+    padding: calc(-1.46px + 1vw) calc(20.86px + 1vw);
+    border-radius: calc(-8.8px + 1vw);
+    font-size: calc(3.2px + 1vw);
+    line-height: calc(11.2px + 1vw); /* 130% */
+    box-shadow: 3px 3px 0px 0px var(--seaform);
+  }
+
+  .download-btn:hover {
+    border: 1px solid var(--primary);
+    transition: all 0.2s ease;
+    background: var(--primary);
+  }
+
+  .download-btn:active {
+    box-shadow: 1px 1px 0px 0px var(--seaform);
+    transform: translate(2px, 2px);
+    transition: all 0.1s ease;
+  }
+
+  .download-message {
+    margin-top: calc(5.2px + 1vw);
+    font-size: calc(3.2px + 1vw);
+  }
+
+  .card-container {
+    gap: calc(11.2px + 1vw);
+  }
+
+  .output-heading {
+    font-size: calc(19.2px + 1vw);
+    line-height: calc(35.2px + 1vw); /* 120% */
+  }
 }
 
 /* Responsive for 1280px */
 @media screen and (min-width: 1440px) {
+  .box {
+    height: calc(323px + 1vw);
+    border-radius: calc(-6.4px + 1vw);
+  }
+
+  .box-link-container {
+    width: calc(398px + 1vw);
+    height: calc(398px + 1vw);
+    padding: calc(30.6px + 1vw);
+    border-radius: calc(1.6px + 1vw);
+    box-shadow: 8px 10px 0px 0px var(--p-500);
+  }
+
+  .link {
+    margin-top: calc(17.6px + 1vw);
+  }
+
+  .button-container {
+    gap: calc(1.6px + 1vw);
+  }
+
+  .upload-another {
+    width: 20%;
+    padding: calc(-1.65px + 1vw) calc(33.6px + 1vw);
+    border-radius: calc(-10.4px + 1vw);
+    font-size: calc(1.6px + 1vw);
+    line-height: calc(9.6px + 1vw); /* 130% */
+    box-shadow: 3px 3px 0px 0px var(--primary);
+  }
+
+  .upload-another:hover {
+    background: rgba(254, 249, 222, 0.5);
+    box-shadow: 3px 3px 0px 0px var(--primary);
+    transition: all 0.2s ease;
+  }
+
+  .upload-another:active {
+    box-shadow: 1px 1px 0px 0px var(--p-500);
+    transform: translate(2px, 2px);
+    transition: all 0.1s ease;
+  }
+
+  .download-btn {
+    width: 80%;
+    padding: calc(-1.65px + 1vw) calc(33.6px + 1vw);
+    border-radius: calc(-10.4px + 1vw);
+    font-size: calc(1.6px + 1vw);
+    line-height: calc(9.6px + 1vw); /* 130% */
+    box-shadow: 3px 3px 0px 0px var(--seaform);
+  }
+
+  .download-btn:hover {
+    border: 1px solid var(--primary);
+    transition: all 0.2s ease;
+    background: var(--primary);
+  }
+
+  .download-btn:active {
+    box-shadow: 1px 1px 0px 0px var(--seaform);
+    transform: translate(2px, 2px);
+    transition: all 0.1s ease;
+  }
+
+  .download-message {
+    margin-top: calc(3.6px + 1vw);
+    font-size: calc(1.6px + 1vw);
+  }
+
+  .card-container {
+    gap: calc(9.6px + 1vw);
+  }
+
+  .output-heading {
+    font-size: calc(17.6px + 1vw);
+    line-height: calc(25.6px + 1vw); /* 120% */
+  }
 }
 
 /* Responsive for 1536px */
 @media screen and (min-width: 1536px) {
+  .box {
+    height: calc(344.7px + 1vw);
+    border-radius: calc(-7.3px + 1vw);
+  }
+
+  .box-link-container {
+    width: calc(424px + 1vw);
+    height: calc(424px + 1vw);
+    padding: calc(32.7px + 1vw);
+    border-radius: calc(0.7px + 1vw);
+    box-shadow: 8px 10px 0px 0px var(--p-500);
+  }
+
+  .link {
+    margin-top: calc(8.7px + 1vw);
+  }
+
+  .button-container {
+    gap: calc(2.7px + 1vw);
+  }
+
+  .upload-another {
+    width: 20%;
+    padding: calc(-1.7px + 1vw) calc(35.9px + 1vw);
+    border-radius: calc(-11.3px + 1vw);
+    font-size: calc(0.7px + 1vw);
+    line-height: calc(8.7px + 1vw); /* 130% */
+    box-shadow: 3px 3px 0px 0px var(--primary);
+  }
+
+  .upload-another:hover {
+    background: rgba(254, 249, 222, 0.5);
+    box-shadow: 3px 3px 0px 0px var(--primary);
+    transition: all 0.2s ease;
+  }
+
+  .upload-another:active {
+    box-shadow: 1px 1px 0px 0px var(--p-500);
+    transform: translate(2px, 2px);
+    transition: all 0.1s ease;
+  }
+
+  .download-btn {
+    width: 80%;
+    padding: calc(-1.7px + 1vw) calc(35.9px + 1vw);
+    border-radius: calc(-11.3px + 1vw);
+    font-size: calc(0.7px + 1vw);
+    line-height: calc(8.7px + 1vw); /* 130% */
+    box-shadow: 3px 3px 0px 0px var(--seaform);
+  }
+
+  .download-btn:hover {
+    border: 1px solid var(--primary);
+    transition: all 0.2s ease;
+    background: var(--primary);
+  }
+
+  .download-btn:active {
+    box-shadow: 1px 1px 0px 0px var(--seaform);
+    transform: translate(2px, 2px);
+    transition: all 0.1s ease;
+  }
+
+  .download-message {
+    margin-top: calc(2.7px + 1vw);
+    font-size: calc(0.7px + 1vw);
+  }
+
+  .card-container {
+    gap: calc(8.7px + 1vw);
+  }
+
+  .output-heading {
+    font-size: calc(16.7px + 1vw);
+    line-height: calc(24.7px + 1vw); /* 120% */
+  }
 }
 
 /* Responsive for 1920px */
 @media screen and (min-width: 1920px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+
+  .box {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 16px;
+    background: #fafafa;
+    border: 1px solid var(--primary);
+  }
+
+  .box img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+  }
+
+  .box-link-container {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    height: 550px;
+    padding: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    border: 1px solid var(--primary);
+    background: rgba(153, 27, 32, 0.1);
+    box-shadow: 10px 12px 0px 0px var(--p-500);
+  }
+
+  .link {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    align-self: stretch;
+  }
+
+  .upload-another {
+    width: 20%;
+    display: flex;
+    padding: 17px 64px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--primary);
+    background: rgba(254, 249, 222, 0.5);
+    color: var(--primary);
+    font-family: "Excon Variable";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; /* 130% */
+    box-shadow: 3px 3px 0px 0px var(--primary);
+  }
+
+  .upload-another:hover {
+    background: var(--seaform);
+    box-shadow: 3px 3px 0px 0px var(--p-500);
+    transition: all 0.2s ease;
+  }
+
+  .upload-another:active {
+    box-shadow: 1px 1px 0px 0px var(--p-500);
+    transform: translate(2px, 2px);
+    transition: all 0.1s ease;
+  }
+
+  .download-btn {
+    width: 80%;
+    display: flex;
+    padding: 17px 73px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--primary);
+    background: var(--primary);
+    color: var(--seaform);
+    font-family: "Excon Variable";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; /* 130% */
+    box-shadow: 3px 3px 0px 0px var(--seaform);
+    cursor: pointer;
+  }
+
+  .download-btn:hover {
+    border: 1px solid var(--primary);
+    transition: all 0.2s ease;
+    background: var(--p-500);
+  }
+
+  .download-btn:active {
+    box-shadow: 1px 1px 0px 0px var(--seaform);
+    transform: translate(2px, 2px);
+    transition: all 0.1s ease;
+  }
+
+  .download-message {
+    margin-top: 20px;
+    color: var(--primary);
+    font-size: 18px;
+    display: none;
+    font-family: "Excon Variable";
+    text-align: center;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .output-heading {
+    color: var(--primary);
+    text-align: center;
+    font-family: "Excon Variable";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px; /* 120% */
+    margin: 0;
+  }
 }
