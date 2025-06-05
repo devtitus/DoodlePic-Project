@@ -173,11 +173,172 @@ a {
 /* ************ Mobiles ************ */
 /* Responsive for 320px to 767px */
 @media (min-width: 320px) and (max-width: 767px) {
+  body {
+    height: 100svh;
+    min-height: 100svh;
+  }
+
+  .container {
+    padding-inline: calc(28.8px + 1vw);
+  }
+
+  .card-container {
+    width: 100%;
+  }
+
+  .box {
+    height: calc(346px + 1vw);
+    border-radius: calc(4.8px + 1vw);
+  }
+
+  .box-link-container {
+    width: 100%;
+    height: calc(396px + 1vw);
+    padding: calc(20.8px + 1vw) calc(12.8px + 1vw);
+    border-radius: calc(12.8px + 1vw);
+    box-shadow: 8px 10px 0px 0px var(--p-500);
+  }
+
+  .link {
+    margin-top: calc(20.8px + 1vw);
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: calc(12.8px + 1vw);
+  }
+
+  .upload-another {
+    width: 100%;
+    padding: calc(8.8px + 1vw) 0;
+    border-radius: calc(0.8px + 1vw);
+    font-size: calc(10.8px + 1vw);
+    line-height: calc(18.8px + 1vw); /* 130% */
+  }
+
+  .upload-another:hover {
+    background: var(--seaform);
+    box-shadow: 3px 3px 0px 0px var(--p-500);
+    transition: all 0.2s ease;
+  }
+
+  .upload-another:active {
+    box-shadow: 1px 1px 0px 0px var(--p-500);
+    transform: translate(2px, 2px);
+    transition: all 0.1s ease;
+  }
+
+  .download-btn {
+    width: 100%;
+    padding: calc(8.8px + 1vw) 0;
+    border-radius: calc(0.8px + 1vw);
+    font-size: calc(10.8px + 1vw);
+    line-height: calc(18.8px + 1vw); /* 130% */
+  }
+
+  .download-btn:hover {
+    border: 1px solid var(--primary);
+    transition: all 0.2s ease;
+    background: var(--p-500);
+  }
+
+  .download-btn:active {
+    box-shadow: 1px 1px 0px 0px var(--seaform);
+    transform: translate(2px, 2px);
+    transition: all 0.1s ease;
+  }
+
+  .download-message {
+    margin-top: calc(14.8px + 1vw);
+    font-size: calc(12.8px + 1vw);
+  }
+
+  .card-container {
+    gap: calc(20.8px + 1vw);
+  }
+
+  .output-heading {
+    font-size: calc(14.8px + 1vw);
+    line-height: calc(22.8px + 1vw); /* 120% */
+  }
 }
 
 /* ************ Tablets ************ */
 /* Responsive for 768px */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .box {
+    height: 450px;
+    border-radius: 16px;
+  }
+
+  .box-link-container {
+    width: 550px;
+    height: 550px;
+    padding: 60px;
+    border-radius: 24px;
+  }
+
+  .link {
+    margin-top: 40px;
+  }
+
+  .button-container {
+    gap: 20px;
+  }
+
+  .upload-another {
+    width: 20%;
+    padding: 17px 64px;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 26px; /* 130% */
+  }
+
+  .upload-another:hover {
+    background: var(--seaform);
+    box-shadow: 3px 3px 0px 0px var(--p-500);
+    transition: all 0.2s ease;
+  }
+
+  .upload-another:active {
+    box-shadow: 1px 1px 0px 0px var(--p-500);
+    transform: translate(2px, 2px);
+    transition: all 0.1s ease;
+  }
+
+  .download-btn {
+    width: 80%;
+    padding: 17px 73px;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 26px; /* 130% */
+  }
+
+  .download-btn:hover {
+    border: 1px solid var(--primary);
+    transition: all 0.2s ease;
+    background: var(--p-500);
+  }
+
+  .download-btn:active {
+    box-shadow: 1px 1px 0px 0px var(--seaform);
+    transform: translate(2px, 2px);
+    transition: all 0.1s ease;
+  }
+
+  .download-message {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .card-container {
+    gap: 32px;
+  }
+
+  .output-heading {
+    font-size: 40px;
+    line-height: 48px; /* 120% */
+  }
 }
 
 /* ************ Desktops ************ */
