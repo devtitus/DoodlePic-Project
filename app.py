@@ -1,11 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 import os
 import cv2
-import pygame
+import numpy as np
 import threading
 import time
 import glob
 import uuid
+
+# Disable pygame audio to prevent ALSA errors on headless/mobile environments
+os.environ['SDL_AUDIODRIVER'] = 'dummy'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
@@ -65,19 +68,15 @@ def sketch_image(image_path):
 
     return sketch_image
 
-def draw_sketch_pygame(sketch_image, output_path):
-    pygame.init()
-    width = len(sketch_image[0])
-    height = len(sketch_image)
-    screen = pygame.Surface((width, height))
-
-    for y in range(height):
-        for x in range(width):
-            color = sketch_image[y][x]
-            screen.set_at((x, y), (color, color, color))
-
-    pygame.image.save(screen, output_path)
-    pygame.quit()
+def save_sketch_image(sketch_image, output_path):
+    """Save sketch image using OpenCV - more reliable and no audio dependencies"""
+    try:
+        # OpenCV handles image saving efficiently without requiring audio libraries
+        cv2.imwrite(output_path, sketch_image)
+        print(f"Sketch saved successfully: {output_path}")
+    except Exception as e:
+        print(f"Error saving sketch: {e}")
+        raise e
 
 @app.route('/')
 def upload_form():
@@ -123,13 +122,11 @@ def upload_image():
             
             # Save uploaded file
             upload_path = os.path.join(app.config['UPLOAD_FOLDER'], upload_filename)
-            file.save(upload_path)
-
-            # Process the image and save the output
+            file.save(upload_path)            # Process the image and save the output
             sketch = sketch_image(upload_path)
             output_filename = f'sketch_{unique_id}.png'
             output_path = os.path.join(app.config['OUTPUT_FOLDER'], output_filename)
-            draw_sketch_pygame(sketch, output_path)
+            save_sketch_image(sketch, output_path)
             
             # Clean up the uploaded file after processing
             if os.path.exists(upload_path):
