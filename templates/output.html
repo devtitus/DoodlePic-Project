@@ -6,8 +6,63 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <title>Art Spark</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}" />
+
+  <!-- SEO Meta Tags -->
+  <title>Your Sketch is Ready! - DoodlePic | Download Your AI-Generated Sketch</title>
+  <meta name="description"
+    content="Your photo has been successfully converted into a beautiful hand-drawn style sketch. Download your AI-generated artwork instantly from DoodlePic.">
+  <meta name="keywords"
+    content="sketch ready, download sketch, AI generated art, photo to sketch conversion, DoodlePic result, digital sketch, artistic conversion, pencil drawing, hand-drawn style, sketch download, AI art, image transformation, sketch generator, digital art, artistic photo conversion">
+  <meta name="author" content="DoodlePic">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Sitemap Reference -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Your Sketch is Ready! - DoodlePic">
+  <meta property="og:description"
+    content="Your photo has been successfully converted into a beautiful hand-drawn style sketch. Download your AI-generated artwork instantly.">
+  <meta property="og:image" content="{{ url_for('send_output', filename=filename) }}">
+  <meta property="og:site_name" content="DoodlePic">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Your Sketch is Ready! - DoodlePic">
+  <meta property="twitter:description"
+    content="Your photo has been successfully converted into a beautiful hand-drawn style sketch. Download your AI-generated artwork instantly.">
+  <meta property="twitter:image" content="{{ url_for('send_output', filename=filename) }}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="{{ url_for('static', filename='favicon_io/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="{{ url_for('static', filename='favicon_io/favicon-16x16.png') }}">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="{{ url_for('static', filename='favicon_io/apple-touch-icon.png') }}">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "name": "AI Generated Sketch",
+    "description": "Hand-drawn style sketch generated from uploaded photo using AI technology",
+    "contentUrl": "{{ url_for('send_output', filename=filename) }}",
+    "creator": {
+      "@type": "SoftwareApplication",
+      "name": "DoodlePic"
+    }  }
+  </script>
+
+  <!-- Preload Critical CSS -->
+  <link rel="preload" href="{{ url_for('static', filename='css/output.css') }}" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+  </noscript>
 </head>
 
 <body>

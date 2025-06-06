@@ -165,5 +165,15 @@ def send_output(filename):
     else:
         return redirect(url_for('upload_form', error='file_not_found'))
 
+@app.route('/robots.txt')
+def robots_txt():
+    """Serve robots.txt file for search engine crawlers"""
+    return send_from_directory('static', 'robots.txt', mimetype='text/plain')
+
+@app.route('/sitemap.xml')
+def sitemap_xml():
+    """Serve sitemap.xml file for search engines"""
+    return send_from_directory('static', 'sitemap.xml', mimetype='application/xml')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

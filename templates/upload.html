@@ -6,9 +6,71 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <title>Upload Image</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}" />
-  <!-- <link rel="stylesheet" href="../static/css/upload.css" /> -->
+
+  <!-- SEO Meta Tags -->
+  <title>DoodlePic - Transform Photos into Beautiful Sketches | AI-Powered Image Converter</title>
+  <meta name="description"
+    content="Convert your photos into stunning hand-drawn style sketches instantly with DoodlePic. Free AI-powered tool to transform memories into artistic sketches online.">
+  <meta name="keywords"
+    content="photo to sketch, image converter, AI sketch generator, photo art, drawing converter, online sketch tool, DoodlePic, pencil sketch, artistic conversion, image to drawing, sketch maker, photo transformation, digital art, AI art generator">
+  <meta name="author" content="DoodlePic">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://doodlepic.com/">
+
+  <!-- Sitemap Reference -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://doodlepic.com/">
+  <meta property="og:title" content="DoodlePic - Transform Photos into Beautiful Sketches">
+  <meta property="og:description"
+    content="Convert your photos into stunning hand-drawn style sketches instantly with DoodlePic. Free AI-powered tool to transform memories into artistic sketches online.">
+  <meta property="og:image" content="https://doodlepic.com/static/assets/og-image.jpg">
+  <meta property="og:site_name" content="DoodlePic">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://doodlepic.com/">
+  <meta property="twitter:title" content="DoodlePic - Transform Photos into Beautiful Sketches">
+  <meta property="twitter:description"
+    content="Convert your photos into stunning hand-drawn style sketches instantly with DoodlePic. Free AI-powered tool to transform memories into artistic sketches online.">
+  <meta property="twitter:image" content="https://doodlepic.com/static/assets/twitter-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="{{ url_for('static', filename='favicon_io/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="{{ url_for('static', filename='favicon_io/favicon-16x16.png') }}">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="{{ url_for('static', filename='favicon_io/apple-touch-icon.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='favicon_io/site.webmanifest') }}">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "DoodlePic",
+    "description": "AI-powered tool to convert photos into beautiful hand-drawn style sketches",
+    "url": "https://doodlepic.com",
+    "applicationCategory": "Photography",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- Preload Critical CSS -->
+  <link rel="preload" href="{{ url_for('static', filename='css/upload.css') }}" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+  </noscript>
 </head>
 
 <body>
@@ -27,14 +89,14 @@
           </div>
         </div>
         <div class="social-btn-container">
-          <a href="#">
+          <a href="https://github.com/devtitus/DoodlePic-Project" target="_blank">
             <div class="github-icon-box">
-              <img src="../static/assets/github-mark-white 1.svg" alt="Github Icon" />
+              <img src="{{ url_for('static', filename='assets/github-mark-white 1.svg') }}" alt="Github Icon" />
             </div>
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/melwyn-john-8125bb214" target="_blank">
             <div class="linkedin-icon-box">
-              <img src="../static/assets/iconmonstr-linkedin-3 1.svg" alt="LinkedIn Icon" />
+              <img src="{{ url_for('static', filename='assets/iconmonstr-linkedin-3 1.svg') }}" alt="LinkedIn Icon" />
             </div>
           </a>
         </div>

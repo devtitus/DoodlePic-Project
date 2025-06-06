@@ -1,0 +1,31 @@
+# Robots.txt for DoodlePic - AI Photo to Sketch Converter
+# https://doodlepic.portwork.site/robots.txt
+
+User-agent: *
+
+# Allow all crawlers to access the main pages
+Allow: /
+Allow: /static/css/
+Allow: /static/js/
+Allow: /static/assets/
+Allow: /static/favicon_io/
+
+# Disallow crawling of temporary files and user uploads
+Disallow: /static/uploads/
+Disallow: /static/output/
+Disallow: /upload
+Disallow: /cleanup
+Disallow: /__pycache__/
+
+# Disallow crawling of dynamic output pages (they're temporary)
+Disallow: /output/
+
+# Allow favicon and manifest
+Allow: /static/favicon_io/favicon.ico
+Allow: /static/favicon_io/site.webmanifest
+
+# Sitemap location
+Sitemap: https://doodlepic.portwork.site/sitemap.xml
+
+# Crawl delay (optional - be respectful to crawlers)
+Crawl-delay: 1
