@@ -187,13 +187,13 @@ a {
   }
 
   .box {
-    height: calc(346px + 1vw);
+    height: calc(350px + 1vw);
     border-radius: calc(4.8px + 1vw);
   }
 
   .box-link-container {
     width: 100%;
-    height: calc(460px + 1vw);
+    height: calc(500px + 1vw);
     padding: calc(20.8px + 1vw) calc(12.8px + 1vw);
     border-radius: calc(12.8px + 1vw);
     box-shadow: 8px 10px 0px 0px var(--p-500);
