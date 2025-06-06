@@ -1,4 +1,4 @@
-# 🎨 Art Spark - DoodlePic Project
+# 🎨 DoodlePic - Image to Sketch Converter
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Flask](https://img.shields.io/badge/Flask-3.0.3-green.svg)](https://flask.palletsprojects.com/)
@@ -8,7 +8,7 @@
 
 > **Transform your digital images into beautiful artistic sketches with just one click!**
 
-**Art Spark** is a modern web application that converts your photos into stunning pencil sketches using advanced computer vision algorithms. Built with Flask and OpenCV, it provides a seamless, responsive experience across all devices.
+**DoodlePic** is a modern web application that converts your photos into stunning pencil sketches using advanced computer vision algorithms. Built with Flask and OpenCV, it provides a seamless, responsive experience across all devices.
 
 🎬 **[Watch Demo Video](https://youtu.be/Ri5vf8UpwGQ)**
 
@@ -18,44 +18,24 @@
 
 - [Features](#-features)
 - [Demo](#-demo)
-- [Architecture](#-architecture)
 - [Installation](#-installation)
 - [Usage](#-usage)
-- [API Documentation](#-api-documentation)
-- [Project Structure](#-project-structure)
-- [Technologies](#-technologies)
+- [Architecture](#-architecture)
 - [Algorithm Details](#-algorithm-details)
-- [Performance](#-performance)
 - [Contributing](#-contributing)
 - [License](#-license)
-- [Support](#-support)
 
 ---
 
 ## ✨ Features
 
-### Core Features
-
-- 🖼️ **Instant Image-to-Sketch Conversion** - Transform any image into a artistic pencil sketch
-- 📱 **Fully Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- 🖼️ **Instant Image-to-Sketch Conversion** - Transform any image into artistic pencil sketch
+- 📱 **Fully Responsive Design** - Works seamlessly on all devices
 - ⚡ **Real-time Processing** - Fast image processing with optimized algorithms
 - 🗂️ **Smart File Management** - Automatic cleanup prevents storage accumulation
-- 💾 **One-Click Download** - Download your sketches in high quality PNG format
-
-### Advanced Features
-
-- 🔄 **Automatic File Cleanup** - Prevents server storage bloat with intelligent file management
-- 🎯 **File Validation** - Supports PNG, JPG, JPEG, GIF formats with size limits
-- 🛡️ **Error Handling** - Robust error handling for a smooth user experience
-- 🔧 **Background Processing** - Periodic cleanup ensures optimal performance
-- 📏 **File Size Limits** - 5MB upload limit for optimal performance
-
-### User Experience
-
-- 🎨 **Modern UI/UX** - Clean, intuitive interface with smooth animations
-- 🚀 **Fast Loading** - Optimized assets and efficient processing
-- 📱 **Mobile-First Design** - Touch-friendly interface for mobile users
-- ♿ **Accessibility** - Built with accessibility best practices
+- 💾 **One-Click Download** - Download sketches in high quality PNG format
+- 🎯 **File Validation** - Supports PNG, JPG, JPEG, GIF formats (5MB limit)
+- 🛡️ **Error Handling** - Robust error handling for smooth user experience
 
 ---
 
@@ -166,7 +146,6 @@ sequenceDiagram
 ### Prerequisites
 
 - **Python 3.8+** - [Download Python](https://www.python.org/downloads/)
-- **pip** - Package manager (comes with Python)
 - **Git** - [Download Git](https://git-scm.com/downloads)
 
 ### Quick Start
@@ -174,7 +153,7 @@ sequenceDiagram
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/DoodlePic-project.git
+   git clone https://github.com/devtitus/DoodlePic-Project.git
    cd DoodlePic-project
    ```
 
@@ -203,156 +182,44 @@ sequenceDiagram
    ```
 
 5. **Access the Application**
-   - Open your browser and navigate to: `http://localhost:5000`
-   - Start uploading and converting your images!
-
-### Docker Installation (Alternative)
-
-```dockerfile
-# Create Dockerfile
-FROM python:3.9-slim
-
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-
-COPY . .
-EXPOSE 5000
-
-CMD ["python", "app.py"]
-```
-
-```bash
-# Build and run
-docker build -t art-spark .
-docker run -p 5000:5000 art-spark
-```
+   - Open your browser: `http://localhost:5000`
+   - Start converting your images!
 
 ---
 
 ## 💻 Usage
 
-### Web Interface
+1. **Upload Image**: Click upload area or drag & drop (PNG, JPG, JPEG, GIF - max 5MB)
+2. **Processing**: Application automatically processes your image (2-5 seconds)
+3. **Download**: View generated sketch and click "Download Sketch" to save
 
-1. **Upload Image**
+### Supported Formats
 
-   - Click the upload area or drag & drop your image
-   - Supported formats: PNG, JPG, JPEG, GIF
-   - Maximum file size: 5MB
-
-2. **Processing**
-
-   - The application automatically processes your image
-   - Processing typically takes 2-5 seconds
-
-3. **Download Result**
-   - View your generated sketch
-   - Click "Download Sketch" to save the result
-   - Click "Remake" to process another image
-
-### Supported File Formats
-
-| Format | Extension   | Max Size | Notes                         |
-| ------ | ----------- | -------- | ----------------------------- |
-| PNG    | .png        | 5MB      | Recommended for best quality  |
-| JPEG   | .jpg, .jpeg | 5MB      | Most common format            |
-| GIF    | .gif        | 5MB      | Animated GIFs use first frame |
+| Format | Extension   | Max Size | Notes            |
+| ------ | ----------- | -------- | ---------------- |
+| PNG    | .png        | 5MB      | Recommended      |
+| JPEG   | .jpg, .jpeg | 5MB      | Most common      |
+| GIF    | .gif        | 5MB      | First frame only |
 
 ---
 
 ## 📡 API Documentation
 
-### Endpoints
+### Main Endpoints
 
-#### `GET /`
-
-- **Description**: Homepage with upload interface
-- **Response**: HTML upload form
-- **Side Effects**: Cleans up old files
-
-#### `POST /upload`
-
-- **Description**: Upload and process image
-- **Parameters**:
-  - `file`: Image file (multipart/form-data)
-- **Response**: Redirect to output page
-- **Validation**: File type, size, and format
-
-#### `GET /output/<filename>`
-
-- **Description**: Display processed sketch
-- **Parameters**:
-  - `filename`: Generated sketch filename
-- **Response**: HTML output page
-
-#### `GET /static/output/<filename>`
-
-- **Description**: Serve sketch file
-- **Parameters**:
-  - `filename`: Sketch filename
-- **Response**: PNG image file
-
-#### `POST /cleanup`
-
-- **Description**: Manual file cleanup
-- **Response**: JSON status message
-- **Usage**: Internal cleanup endpoint
-
----
-
-## 📁 Project Structure
-
-```
-DoodlePic-project/
-├── 📄 app.py                 # Main Flask application
-├── 📄 requirements.txt       # Python dependencies
-├── 📄 README.md             # Project documentation
-├── 📄 LICENSE               # MIT License
-├── 📄 Procfile              # Heroku deployment config
-├── 📄 generate_license.py   # License generator utility
-├── 📁 templates/            # HTML templates
-│   ├── 📄 upload.html       # Upload page template
-│   └── 📄 output.html       # Output page template
-├── 📁 static/               # Static assets
-│   ├── 📁 css/              # Stylesheets
-│   │   ├── 📄 upload.css    # Upload page styles
-│   │   ├── 📄 output.css    # Output page styles
-│   │   └── 📄 fonts.css     # Font definitions
-│   ├── 📁 fonts/            # Custom fonts
-│   │   ├── 📁 excon/        # Excon font family
-│   │   └── 📁 satoshi/      # Satoshi font family
-│   ├── 📁 assets/           # Images and icons
-│   ├── 📁 js/               # JavaScript files
-│   ├── 📁 uploads/          # Temporary upload storage
-│   └── 📁 output/           # Generated sketches
-└── 📁 __pycache__/          # Python cache files
-```
+- `GET /` - Homepage with upload interface
+- `POST /upload` - Upload and process image
+- `GET /output/<filename>` - Display processed sketch
+- `GET /static/output/<filename>` - Serve sketch file
+- `POST /cleanup` - Manual file cleanup
 
 ---
 
 ## 🛠️ Technologies
 
-### Backend Stack
-
-- **[Flask 3.0.3](https://flask.palletsprojects.com/)** - Lightweight web framework
-- **[OpenCV 4.10.0](https://opencv.org/)** - Computer vision library
-- **[NumPy 1.26.4](https://numpy.org/)** - Numerical computing
-- **[Pygame 2.5.2](https://www.pygame.org/)** - Graphics rendering
-- **[Pillow 10.3.0](https://pillow.readthedocs.io/)** - Image processing library
-
-### Frontend Stack
-
-- **HTML5** - Modern markup
-- **CSS3** - Advanced styling with custom properties
-- **Vanilla JavaScript** - Client-side functionality
-- **Responsive Design** - Mobile-first approach
-
-### Development Tools
-
-- **Python 3.8+** - Programming language
-- **Werkzeug** - WSGI utility library
-- **Jinja2** - Template engine
-- **Gunicorn** - Production WSGI server
+**Backend**: Flask 3.0.3, OpenCV 4.10.0, NumPy 1.26.4, Pygame 2.5.2  
+**Frontend**: HTML5, CSS3, Vanilla JavaScript  
+**Processing**: Computer Vision algorithms with OpenCV
 
 ---
 
@@ -407,70 +274,19 @@ flowchart TD
 
 - **Memory Management**: Automatic cleanup of temporary files
 - **Processing Speed**: Optimized OpenCV operations
-- **File Handling**: Efficient I/O operations
 - **Background Tasks**: Periodic cleanup threading
-
----
-
-## 📊 Performance
-
-### Benchmarks
-
-| Image Size      | Processing Time | Memory Usage |
-| --------------- | --------------- | ------------ |
-| 1MP (1024x768)  | ~2 seconds      | ~50MB        |
-| 2MP (1920x1080) | ~3 seconds      | ~80MB        |
-| 5MP (2560x1920) | ~5 seconds      | ~150MB       |
-
-### System Requirements
-
-- **Minimum**: 2GB RAM, 1GB storage
-- **Recommended**: 4GB RAM, 2GB storage
-- **CPU**: Any modern processor (2+ cores recommended)
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! Here's how you can help:
+1. Fork the repository
+2. Create feature branch: `git checkout -b feature/amazing-feature`
+3. Commit changes: `git commit -m "Add amazing feature"`
+4. Push to branch: `git push origin feature/amazing-feature`
+5. Open Pull Request
 
-### Development Setup
-
-1. **Fork the Repository**
-2. **Create Feature Branch**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-3. **Make Changes**
-4. **Run Tests**
-   ```bash
-   python -m pytest tests/
-   ```
-5. **Commit Changes**
-   ```bash
-   git commit -m "Add amazing feature"
-   ```
-6. **Push to Branch**
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-7. **Open Pull Request**
-
-### Contribution Guidelines
-
-- **Code Style**: Follow PEP 8 guidelines
-- **Documentation**: Update README for new features
-- **Testing**: Add tests for new functionality
-- **Performance**: Consider performance implications
-
-### Areas for Contribution
-
-- 🎨 **UI/UX Improvements**
-- 📱 **Mobile Optimization**
-- 🚀 **Performance Enhancements**
-- 🧪 **Additional Image Effects**
-- 🔧 **Code Optimization**
-- 📝 **Documentation**
+**Guidelines**: Follow PEP 8, add tests, update documentation
 
 ---
 
@@ -478,86 +294,17 @@ We welcome contributions! Here's how you can help:
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
-### MIT License Summary
-
-- ✅ **Commercial use**
-- ✅ **Modification**
-- ✅ **Distribution**
-- ✅ **Private use**
-- ❌ **Liability**
-- ❌ **Warranty**
-
 ---
 
 ## 🆘 Support
 
-### Getting Help
+- 🐛 **Issues**: [GitHub Issues](https://github.com/devtitus/DoodlePic-Project/issues)
+- 📧 **Email**: [m.works.gd@gmail.com](mailto:m.works.gd@gmail.com)
 
-- 📧 **Email**: [your-email@example.com](mailto:your-email@example.com)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/DoodlePic-project/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/DoodlePic-project/discussions)
+### Common Issues
 
-### Troubleshooting
-
-#### Common Issues
-
-1. **Import Error: No module named 'cv2'**
-
-   ```bash
-   pip install opencv-python
-   ```
-
-2. **Permission Denied Error**
-
-   ```bash
-   # Windows
-   Run as Administrator
-
-   # macOS/Linux
-   sudo pip install -r requirements.txt
-   ```
-
-3. **Port Already in Use**
-   ```bash
-   # Kill process on port 5000
-   lsof -ti:5000 | xargs kill -9
-   ```
-
-#### System-Specific Notes
-
-- **Windows**: Ensure Visual C++ redistributables are installed
-- **macOS**: May require Xcode command line tools
-- **Linux**: Install python3-dev and build-essential
-
----
-
-## 🙏 Acknowledgments
-
-Special thanks to:
-
-- **OpenCV Community** - For the amazing computer vision library
-- **Flask Team** - For the lightweight and powerful web framework
-- **Pygame Developers** - For the graphics rendering capabilities
-- **Contributors** - Everyone who has contributed to this project
-
----
-
-## 🔮 Roadmap
-
-### Upcoming Features
-
-- [ ] **Multiple Sketch Styles** - Watercolor, charcoal, etc.
-- [ ] **Batch Processing** - Process multiple images at once
-- [ ] **API Integration** - REST API for developers
-- [ ] **Cloud Storage** - Integration with cloud services
-- [ ] **Social Sharing** - Direct social media sharing
-- [ ] **User Accounts** - Save and manage sketches
-
-### Version History
-
-- **v1.0.0** - Initial release with basic sketch functionality
-- **v1.1.0** - Added file cleanup and responsive design
-- **v1.2.0** - Performance optimizations and error handling
+1. **Import Error: No module named 'cv2'**: `pip install opencv-python`
+2. **Port Already in Use**: `lsof -ti:5000 | xargs kill -9`
 
 ---
 
