@@ -2,3 +2,4 @@ venv/
 static/css/temp.txt
 static/uploads/
 static/output/
+__pycache__/

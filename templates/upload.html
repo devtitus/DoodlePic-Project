@@ -263,15 +263,18 @@
 
         displayFileInfo(file);
         hasFile = true;
-      }
-
-      function displayFileInfo(file) {
+      } function displayFileInfo(file) {
+        // First set the full filename
         fileNameSpan.textContent = file.name;
+
+        // Show the file info container
         fileInfo.style.display = "flex";
         uploadContainer.classList.add("has-file");
 
-        // Apply filename truncation
-        truncateFileName(file.name, 10); // Show first 10 chars and last 4 chars
+        // Apply filename truncation if needed
+        if (file.name.length > 20) {
+          truncateFileName(file.name, 10);
+        }
       }
 
       function setProcessingState(isProcessing) {
