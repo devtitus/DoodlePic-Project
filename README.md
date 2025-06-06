@@ -350,9 +350,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ### Getting Help
 
-- 📧 **Email**: [your-email@example.com](mailto:your-email@example.com)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/DoodlePic-project/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/DoodlePic-project/discussions)
+- 📧 **Email**: [m.works.gd@gmail.com](mailto:m.works.gd@gmail.com)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/devtitus/DoodlePic-Project/issues)
 
 ### Troubleshooting
 
@@ -420,8 +419,8 @@ Special thanks to:
 
 <div align="center">
 
-**Made with ❤️ by [Your Name]**
+**Made with ❤️ by Melwyn Titus**
 
-[⭐ Star this repo](https://github.com/yourusername/DoodlePic-project) | [🍴 Fork it](https://github.com/yourusername/DoodlePic-project/fork) | [📝 Report Bug](https://github.com/yourusername/DoodlePic-project/issues)
+[⭐ Star this repo](https://github.com/devtitus/DoodlePic-Project) | [🍴 Fork it](https://github.com/devtitus/DoodlePic-Project/fork) | [📝 Report Bug](https://github.com/devtitus/DoodlePic-Project/issues)
 
 </div>
