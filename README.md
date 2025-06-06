@@ -233,9 +233,6 @@ flowchart TD
     G --> H[Render with Pygame]
     H --> I[Save as PNG]
 
-    style A fill:#e3f2fd
-    style G fill:#e8f5e8
-    style I fill:#fff3e0
 ```
 
 ### Technical Implementation
