@@ -56,10 +56,6 @@ graph TB
     I --> A
     H --> J[File Cleanup]
 
-    style A fill:#e1f5fe
-    style D fill:#f3e5f5
-    style F fill:#e8f5e8
-    style G fill:#fff3e0
 ```
 
 ---
@@ -106,9 +102,6 @@ graph TB
     F --> K
     D --> L
 
-    style A fill:#e3f2fd
-    style G fill:#f1f8e9
-    style F fill:#fce4ec
 ```
 
 ### Data Flow Diagram
