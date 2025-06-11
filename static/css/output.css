@@ -189,6 +189,8 @@ a {
   .box {
     height: calc(350px + 1vw);
     border-radius: calc(4.8px + 1vw);
+    justify-content: center;
+    align-items: center;
   }
 
   .box-link-container {
@@ -279,6 +281,8 @@ a {
   .box {
     height: 450px;
     border-radius: 16px;
+    align-items: center;
+    justify-content: center;
   }
 
   .box-link-container {
@@ -357,6 +361,8 @@ a {
   .box {
     height: calc(229.8px + 1vw);
     border-radius: calc(1.8px + 1vw);
+    justify-content: center;
+    align-items: center;
   }
 
   .box-link-container {
@@ -437,6 +443,8 @@ a {
   .box {
     height: calc(287px + 1vw);
     border-radius: calc(-4.8px + 1vw);
+    justify-content: center;
+    align-items: center;
   }
 
   .box-link-container {
@@ -517,6 +525,8 @@ a {
   .box {
     height: calc(323px + 1vw);
     border-radius: calc(-6.4px + 1vw);
+    align-items: center;
+    justify-content: center;
   }
 
   .box-link-container {
@@ -597,6 +607,8 @@ a {
   .box {
     height: calc(344.7px + 1vw);
     border-radius: calc(-7.3px + 1vw);
+    align-items: center;
+    justify-content: center;
   }
 
   .box-link-container {
@@ -691,6 +703,7 @@ a {
     border-radius: 16px;
     background: #fafafa;
     border: 1px solid var(--primary);
+    justify-content: center;
   }
 
   .box img {
