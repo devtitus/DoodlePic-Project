@@ -398,16 +398,6 @@ Special thanks to:
 
 ---
 
-## 🔮 Roadmap
-
-### Upcoming Features
-
-- [ ] **Multiple Sketch Styles** - Watercolor, charcoal, etc.
-- [ ] **Batch Processing** - Process multiple images at once
-- [ ] **API Integration** - REST API for developers
-- [ ] **Cloud Storage** - Integration with cloud services
-- [ ] **Social Sharing** - Direct social media sharing
-- [ ] **User Accounts** - Save and manage sketches
 
 ### Version History
 
